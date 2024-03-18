@@ -15,7 +15,7 @@ print(date)
 @app.get("/")
 async def root():
     date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    token = jwt.encode({'name': 'Muzammil', "date": date}, 'secret', algorithm='HS256')
+    token = jwt.encode({'nameX': 'Muzammil', "date": date}, 'secret', algorithm='HS256')
     res = jwt.decode(token, 'secret', algorithms=['HS256'])
 
 
